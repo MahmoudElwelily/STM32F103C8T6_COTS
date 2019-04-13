@@ -39,7 +39,7 @@ void RCC_vInit (void)
 		SET_BIT(RCC->CR.WordAccess,16);
 
 		/*waiting HSE clock to be ready and stable*/
-		while (GET_BIT(RCC->CFGR.WordAccess,17) == 0);
+		while (GET_BIT(RCC->CR.WordAccess,17) == 0);
 	}
 	else
 	{
