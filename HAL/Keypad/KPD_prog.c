@@ -34,10 +34,10 @@ u8 KPD_u8GetPressedKeys(u8 (*PAu8KpdState)[KPD_u8_NO_OF_ROWS])
 	{
 		if (KPD_u8_TYPE == KPD_u8_PULL_UP)
 		{
-			for (i = ZERO ; i < KPD_u8_NO_OF_COLUMNS ; i++)
+			for (i = UNSIGNED_MIN ; i < KPD_u8_NO_OF_COLUMNS ; i++)
 			{
 				/*firstly Setting all column pins to high to disable any key*/
-				for (j = ZERO ; j < KPD_u8_NO_OF_COLUMNS ; j++)
+				for (j = UNSIGNED_MIN ; j < KPD_u8_NO_OF_COLUMNS ; j++)
 				{
 					Local_u8Error = DIO_u8SetPinValue (KPD_Au8ColumnsPins[j],DIO_u8_PIN_HIGH);
 				}
@@ -62,10 +62,10 @@ u8 KPD_u8GetPressedKeys(u8 (*PAu8KpdState)[KPD_u8_NO_OF_ROWS])
 		}
 		else
 		{
-			for (i = ZERO ; i < KPD_u8_NO_OF_COLUMNS ; i++)
+			for (i = UNSIGNED_MIN ; i < KPD_u8_NO_OF_COLUMNS ; i++)
 			{
 				/*firstly Setting all column pins to high to disable any key*/
-				for (j = ZERO ; j < KPD_u8_NO_OF_COLUMNS ; j++)
+				for (j = UNSIGNED_MIN ; j < KPD_u8_NO_OF_COLUMNS ; j++)
 				{
 					Local_u8Error = DIO_u8SetPinValue (KPD_Au8ColumnsPins[j],DIO_u8_PIN_LOW);
 				}
