@@ -95,9 +95,9 @@ u8 LCD_u8SaveSpecialWord (u8 Au8_SymbolPattern[][8],u8 Copy_u8WordSize)
 	}
 	LCD_vWriteCommand(LCD_u8_SET_CGRAM_ADDRESS);
 
-	for (Local_u8Index1 = ZERO ; Local_u8Index1 < Copy_u8WordSize ; Local_u8Index1++)
+	for (Local_u8Index1 = UNSIGNED_MIN ; Local_u8Index1 < Copy_u8WordSize ; Local_u8Index1++)
 	{
-		for (Local_u8Index2 = ZERO ; Local_u8Index2 < LCD_u8_CHARACTER_SIZE ; Local_u8Index2++)
+		for (Local_u8Index2 = UNSIGNED_MIN ; Local_u8Index2 < LCD_u8_CHARACTER_SIZE ; Local_u8Index2++)
 		{
 			LCD_vWriteData(Au8_SymbolPattern[Local_u8Index1][Local_u8Index2]);
 		}
