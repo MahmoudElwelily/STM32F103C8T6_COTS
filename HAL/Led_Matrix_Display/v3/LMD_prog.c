@@ -33,7 +33,7 @@ u8 LMD_u8Display (u8 *Copy_Pu8Image,u8 Copy_u8Color)
 				/* if the required color is RED */
 				case (LMD_u8_RED):
 				{
-					for (i = ZERO; i < LMD_u8_SIZE ; i++)
+					for (i = UNSIGNED_MIN; i < LMD_u8_SIZE ; i++)
 					{
 						Local_u8Error = DIO_u8SetPinValue (LMD_Au8LmdActPrt[i],DIO_u8_PIN_HIGH);
 						Local_u8Error = DIO_u8SetPinValue (LMD_Au8RedPrt[0],~GET_BIT(Copy_Pu8Image[i],0));
@@ -53,7 +53,7 @@ u8 LMD_u8Display (u8 *Copy_Pu8Image,u8 Copy_u8Color)
 				/* if the required color is GREEN */
 				case (LMD_u8_GREEN):
 				{
-					for (i = ZERO; i < LMD_u8_SIZE ; i++)
+					for (i = UNSIGNED_MIN; i < LMD_u8_SIZE ; i++)
 					{
 						Local_u8Error = DIO_u8SetPinValue (LMD_Au8LmdActPrt[i],DIO_u8_PIN_HIGH);
             Local_u8Error = DIO_u8SetPinValue (LMD_Au8GreenPrt[0],~GET_BIT(Copy_Pu8Image[i],0));
@@ -79,7 +79,7 @@ u8 LMD_u8Display (u8 *Copy_Pu8Image,u8 Copy_u8Color)
 				/* if the required color is RED */
 				case (LMD_u8_RED):
 				{
-					for (i = ZERO; i < LMD_u8_SIZE ; i++)
+					for (i = UNSIGNED_MIN; i < LMD_u8_SIZE ; i++)
 					{
 						Local_u8Error = DIO_u8SetPinValue (LMD_Au8LmdActPrt[i],DIO_u8_PIN_LOW);
 						Local_u8Error = DIO_u8SetPinValue (LMD_Au8RedPrt[0],GET_BIT(Copy_Pu8Image[i],0));
@@ -99,7 +99,7 @@ u8 LMD_u8Display (u8 *Copy_Pu8Image,u8 Copy_u8Color)
 				/* if the required color is GREEN */
 				case (LMD_u8_GREEN):
 				{
-					for (i = ZERO; i < LMD_u8_SIZE ; i++)
+					for (i = UNSIGNED_MIN; i < LMD_u8_SIZE ; i++)
 					{
 						Local_u8Error = DIO_u8SetPinValue (LMD_Au8LmdActPrt[i],DIO_u8_PIN_LOW);
             Local_u8Error = DIO_u8SetPinValue (LMD_Au8GreenPrt[0],GET_BIT(Copy_Pu8Image[i],0));
