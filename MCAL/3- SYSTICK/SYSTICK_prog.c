@@ -46,7 +46,7 @@ void SysTick_Init(void)
 void SysTick_Wait10ms(u32 Copy_u32Delay)
 {
 	u32 i;
-	for (i= 0 ; i < Copy_u32Delay ; i++)
+	for (i = 0 ; i < Copy_u32Delay ; i++)
 	{
 		SYSTICK_vSysTickWait(SYSTICK_u8_10MS_COUNT);
 	}
@@ -60,7 +60,7 @@ void SysTick_Wait10ms(u32 Copy_u32Delay)
 void SysTick_Wait10us(u32 Copy_u32Delay)
 {
 	u32 i;
-	for (i= 0 ; i < Copy_u32Delay ; i++)
+	for (i = 0 ; i < Copy_u32Delay ; i++)
 	{
 		SYSTICK_vSysTickWait(SYSTICK_u8_10US_COUNT);
 	}
