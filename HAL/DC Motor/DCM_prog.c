@@ -27,7 +27,7 @@ void DCM_vInit (void)
 {
 	u8 Local_u8Index;
 
-	for (Local_u8Index = 0; Local_u8Index < DCM_NO_OF_MOTORS; Local_u8Index++)
+	for (Local_u8Index = UNSIGNED_MIN; Local_u8Index < DCM_NO_OF_MOTORS; Local_u8Index++)
 	{
 		if (DCM_Au8InitState[Local_u8Index] == DCM_u8_DISABLE)
 		{
